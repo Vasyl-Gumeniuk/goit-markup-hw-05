@@ -83,6 +83,7 @@ img {
 .site-nav .link.current {
   position: relative;
   padding: 32px 0px;
+  color: var(--accent-color);
 }
 .site-nav .link.current::after {
   position: absolute;
@@ -93,11 +94,11 @@ img {
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
-  opacity: 0;
+  opacity: 1;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-.site-nav .link.current:hover::after {
+/* .site-nav .link.current:hover::after {
   position: absolute;
   bottom: -3px;
   left: 0px;
@@ -107,8 +108,9 @@ img {
   background-color: var(--accent-color);
   border-radius: 2px;
   opacity: 1;
-  }
-.site-nav .link {
+  } */
+
+  .site-nav .link {
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -126,15 +128,8 @@ img {
 .site-nav .link:focus {
   color: var(--accent-color);
 }
-/* .site-nav .link.current {
-  color: var(--accent-color);
-}
-.contact .link.current {
-  color: var(--accent-color);
-}
-.contact .contact-icon.current{
-fill: var(--accent-color);
-} */
+
+
 .contact .link {
   display: inline-flex;
   align-items: center;
@@ -317,7 +312,8 @@ fill: var(--accent-color);
   position: relative;
 }
 .card-thumb {
-  display: block;
+  display: flex;
+  justify-content: center;
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -329,7 +325,6 @@ font-style: normal;
 font-weight: bold;
 font-size: 14px;
 line-height: 1.14;
-text-align: center;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #FFFFFF;
@@ -454,7 +449,7 @@ padding: 27px 0px;
   fill: var(--secondary-text-color);
 }
 .social-icon {
-  fill: #afb1b8;
+  fill: var(--fill-icon-social);
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -786,3 +781,10 @@ padding: 27px 0px;
   background-color: #ffffff;
   border: 1px solid #999999;
 }
+
+.close-button:hover,
+.close-button:focus {
+  fill: rgba(0, 0, 0, 1);
+  border-color: transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
